@@ -42,7 +42,7 @@ class AuthenticationController extends GetxController {
       UploadTask uploadTask = storageReference.putFile(imageFile);
 
       TaskSnapshot taskSnapshot = await uploadTask.whenComplete(() => null);
-      String downloadUrlOfImage = await taskSnapshot.ref.getDownloadURL()
+      String downloadUrlOfImage = await taskSnapshot.ref.getDownloadURL();
 
       return downloadUrlOfImage;
 
