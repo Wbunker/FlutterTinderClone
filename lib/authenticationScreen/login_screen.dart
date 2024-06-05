@@ -1,5 +1,7 @@
+import 'package:dating_app/authenticationScreen/registration_screen.dart';
 import 'package:dating_app/widgets/custom_text_field_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -77,6 +79,8 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(
                 height: 30,
               ),
+
+
               // login button
               Container(
                 width: MediaQuery.of(context).size.width - 36,
@@ -121,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   InkWell(
                     onTap: ()
                     {
-                      
+                      Get.to(const RegistrationScreen());
                     },
                     child: const Text(
                       "Register Now",
@@ -141,7 +145,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   ? const CircularProgressIndicator(
                       valueColor: AlwaysStoppedAnimation<Color>(Colors.pink),
                     )
-                  : Container()
+                  : Container(),
+              const SizedBox(
+                height: 30,
+              ),
 
             ],
           ),
